@@ -8,7 +8,6 @@ export default function HomeScreen({ navigation }) {
 
   return (
     <ScrollView style={styles.container}>
-      {/* Header Section */}
       <View style={styles.header}>
         <Text style={styles.location}>1st Netajinagar, Kempapura, Hebbal</Text>
         <View style={styles.box}>
@@ -22,8 +21,6 @@ export default function HomeScreen({ navigation }) {
         </View>
         </View>
       </View>
-
-      {/* Modules */}
       <Text style={styles.moduleTitle}>Modules</Text>
 
       <View style={styles.moduleGrid}>
