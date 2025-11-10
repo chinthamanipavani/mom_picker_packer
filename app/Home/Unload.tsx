@@ -6,7 +6,6 @@ import { SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from "react-na
 const UnloadingTasks = () => {
   return (
     <SafeAreaView style={styles.container}>
-      {/* Header */}
       <View style={styles.header}>
         <Ionicons name="arrow-back" size={24} color="#00a99d" onPress={() => router.back()}/>
         <Text style={styles.headerTitle}>Unloading Tasks</Text>

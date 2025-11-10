@@ -1,4 +1,5 @@
 import { MaterialIcons } from '@expo/vector-icons';
+import { router } from 'expo-router';
 import React from "react";
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -105,7 +106,7 @@ export default function Pickingdone() {
           </View>
         </View>
       </View>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => router.push('/Home/Packing')}>
         <View style={styles.startbtn}>
           <Text
             style={{

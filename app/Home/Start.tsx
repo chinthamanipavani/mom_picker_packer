@@ -49,7 +49,6 @@ const ConsignmentScanningScreen = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      {/* Header */}
       <View style={styles.header}>
         <Text style={styles.title}>Consignment Scanning</Text>
         <Text style={styles.subtitle}>Consignment ID: 1096547839</Text>
