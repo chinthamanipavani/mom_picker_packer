@@ -8,17 +8,17 @@ const profileSections=[
   {
     title: 'My Reports',
     icon :<Image source={require('@/assets/images/logo.png')} style={{ height:28, width:28}}/>,
-    link: '/BottomNavBar/home',
+    link: '/login/camera',
   },
   {
     title: 'Terms & Conditions',
     icon: <Image source={require('@/assets/images/logo.png')} style={{ height:32, width:25 }}/>,
-    link:'/BottomNavBar/home',
+    link:'/login/selectLocation',
   },
   {
     title: 'Settings',
     icon: <Image source={require('@/assets/images/logo.png')} style={{ height:28, width:28}}/>,
-    link: '/BottomNavBar/home',
+    link: '/login/Salary',
   }
 ];
 
@@ -36,7 +36,7 @@ export default function ProfileScreen(){
                 <MaterialIcons name="arrow-back" size={32} color="#00a99d"/>
               </TouchableOpacity>
             </View>
-            <Pressable onPress={()=>router.push('/BottomNavBar/home')}>
+            <Pressable onPress={()=>router.push('/login/selectLocation')}>
               <Image source={require('@/assets/images/logo.png')} style={{ height:20, width:20}}/>
             </Pressable>
           </View>

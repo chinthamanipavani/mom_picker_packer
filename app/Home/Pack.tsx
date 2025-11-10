@@ -37,7 +37,7 @@ const index = () => {
             style={styles.lockimg}
           />
           <Text style={{ padding: 8 }}>Searching for order...</Text>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => router.push('/Home/Ordermodel')}>
             <View style={styles.btn}>
               <Image source={require("../../assets/images/img1.jpg")} />
               <Text style={{ textAlign: "center" }}>Fetch Order</Text>
