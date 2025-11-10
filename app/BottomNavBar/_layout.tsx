@@ -1,9 +1,10 @@
+// // app/BottomNavBar/_layout.tsx
 import { FontAwesome5, Ionicons, MaterialIcons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
-export default function BottomNavbar() {
+export default function Layout() {
   return (
     <Tabs
       screenOptions={{
