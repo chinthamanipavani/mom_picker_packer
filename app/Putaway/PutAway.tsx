@@ -2,222 +2,71 @@ import Entypo from "@expo/vector-icons/Entypo";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import { router } from "expo-router";
-
 import React from "react";
-import { Image, Text, TouchableOpacity, View } from "react-native";
+import { Dimensions, Image, ScrollView, Text, TouchableOpacity, View, } from "react-native";
+
+const { width } = Dimensions.get("window");
 
 const PutAway = () => {
   return (
-    <View style={{ borderRadius: 20 }}>
+    <ScrollView
+      style={{ flex: 1, backgroundColor: "#fff" }}
+      showsVerticalScrollIndicator={false}
+    >
       <TouchableOpacity onPress={() => router.push("/Home/Inbound")}>
-        <View
-          style={{
-            flex: 1,
-            flexDirection: "row",
-            backgroundColor: "#00A79B1A",
-            alignItems: "center",
-            padding: 4,
-            gap: 8,
-          }}
-        >
+        <View style={{ flexDirection: "row", backgroundColor: "#00A79B1A", alignItems: "center", paddingVertical: 10, paddingHorizontal: 15, borderRadius: 10, marginTop: 10, }} >
           <MaterialCommunityIcons name="arrow-left" size={24} color="#00A79B" />
-          <Text style={{ fontWeight: 500, fontSize: 20 }}>Putaway</Text>
+          <Text style={{ fontWeight: "600", fontSize: 20, marginLeft: 8, color: "#333", }}>  Putaway</Text>
         </View>
       </TouchableOpacity>
-
-      <View
-        style={{
-          borderWidth: 2,
-          borderColor: "#00A79B",
-          padding: 10,
-          margin: 15,
-          backgroundColor: "#00A79B1A",
-          borderRadius: 10,
-        }}
-      >
-        <Text style={{ textAlign: "center", padding: 2, fontWeight: 300 }}>
-          Slot Details: 06:00 PM - 08:00 PM
-        </Text>
-
-        <View
-          style={{ flexDirection: "row", flex: 1, justifyContent: "center" }}
-        >
-          <View
-            style={{
-              flexDirection: "column",
-              alignItems: "center",
-              borderWidth: 2,
-              borderColor: "white",
-              backgroundColor: "white",
-              borderRadius: 8,
-              //   padding: 10,
-              margin: 5,
-              width: 100,
-              height: 150,
-            }}
-          >
-            <Image
-              source={require("../../assets/images/img5.jpg")}
-              style={{ width: 30, height: 60 }}
-            />
-
-            <View style={{ flexDirection: "row", alignItems: "center" }}>
-              <Text style={{ fontSize: 20, color: "#00A79B" }}>02:30</Text>
+      <View style={{ borderWidth: 2, borderColor: "#00A79B", padding: 15, margin: 15, backgroundColor: "#00A79B1A", borderRadius: 10, }} >
+        <Text style={{ textAlign: "center", fontWeight: "400", marginBottom: 10 }}> Slot Details: 06:00 PM - 08:00 PM</Text>
+        <View style={{ flexDirection: "row", justifyContent: "space-around", flexWrap: "wrap",  }}>
+          <View style={{  alignItems: "center",  backgroundColor: "white",  borderRadius: 10,  width: width * 0.28,  minWidth: 100,  padding: 10,  marginVertical: 8,  shadowColor: "#000",  shadowOpacity: 0.1,  shadowRadius: 4,  elevation: 3, }} >
+            <Image source={require("../../assets/images/img5.jpg")} style={{ width: 40, height: 60, resizeMode: "contain" }} />
+            <View style={{ flexDirection: "row", alignItems: "center", marginTop: 6 }}>
+              <Text style={{ fontSize: 18, color: "#00A79B", fontWeight: "600" }}>  02:30</Text>
               <Text style={{ fontWeight: "500" }}> hrs</Text>
             </View>
-            <Text>Active hours</Text>
+            <Text style={{ marginTop: 4 }}>Active hours</Text>
           </View>
-
-          <View
-            style={{
-              flexDirection: "column",
-              alignItems: "center",
-              borderWidth: 2,
-              borderColor: "white",
-              backgroundColor: "white",
-              borderRadius: 8,
-              //   padding: 10,
-              margin: 5,
-              width: 100,
-            }}
-          >
-            <Image
-              source={require("../../assets/images/img2.jpg")}
-              style={{ width: 60, height: 60 }}
-            />
-
-            <View
-              style={{
-                flexDirection: "row",
-                alignItems: "center",
-              }}
-            >
-              <Text style={{ fontSize: 20, color: "#00A79B" }}>3</Text>
+          <View style={{ alignItems: "center", backgroundColor: "white", borderRadius: 10, width: width * 0.28, minWidth: 100, padding: 10, marginVertical: 8, shadowColor: "#000", shadowOpacity: 0.1, shadowRadius: 4, elevation: 3,}}>
+            <Image source={require("../../assets/images/img2.jpg")} style={{ width: 60, height: 60, resizeMode: "contain" }}/>
+            <View style={{ flexDirection: "row", alignItems: "center", marginTop: 6 }}>
+              <Text style={{ fontSize: 18, color: "#00A79B", fontWeight: "600" }}> 3   </Text>
               <Text style={{ fontWeight: "500" }}> Items</Text>
             </View>
-
-            <Text>Picked</Text>
+            <Text style={{ marginTop: 4 }}>Picked</Text>
           </View>
-
-          <View
-            style={{
-              flexDirection: "column",
-              alignItems: "center",
-              borderWidth: 2,
-              borderColor: "white",
-              backgroundColor: "white",
-              borderRadius: 8,
-              //   padding: 10,
-              margin: 5,
-              width: 100,
-            }}
-          >
-            <Image
-              source={require("../../assets/images/img3.jpg")}
-              style={{ width: 60, height: 60 }}
-            />
-
-            <View style={{ flexDirection: "row", alignItems: "center" }}>
-              <MaterialIcons
-                name="currency-rupee"
-                size={24}
-                color="black"
-                style={{ fontSize: 20, color: "#00A79B", marginTop: 10 }}
-              />{" "}
-              <Text style={{ fontWeight: "500" }}> 2000</Text>
+          <View style={{ alignItems: "center", backgroundColor: "white", borderRadius: 10, width: width * 0.28, minWidth: 100, padding: 10, marginVertical: 8, shadowColor: "#000", shadowOpacity: 0.1, shadowRadius: 4, elevation: 3, }}>
+            <Image source={require("../../assets/images/img3.jpg")} style={{ width: 60, height: 60, resizeMode: "contain" }} />
+            <View style={{ flexDirection: "row", alignItems: "center", marginTop: 6 }}>
+              <MaterialIcons  name="currency-rupee" size={18} color="#00A79B" />
+              <Text style={{ fontWeight: "500", fontSize: 16 }}>2000</Text>
             </View>
-
-            <Text>Earnings</Text>
+            <Text style={{ marginTop: 4 }}>Earnings</Text>
           </View>
         </View>
       </View>
+      <View style={{ flexDirection: "row", alignItems: "center", marginHorizontal: 15, marginBottom: 15, padding: 15, borderWidth: 2, borderColor: "#00A79B", backgroundColor: "#00A79B1A", borderRadius: 10, justifyContent: "space-between", flexWrap: "wrap", }} >
+        <View style={{ flexDirection: "row", alignItems: "center" }}>
+          <Entypo name="text-document" size={34} color="#00A79B" />
+          <Text style={{ marginLeft: 10, fontWeight: "500", fontSize: 18 }}> Previous putaway details </Text>
+        </View>
 
-      <View
-        style={{
-          flexDirection: "row",
-          flex: 1,
-          gap: 10,
-          margin: 15,
-          marginTop: 10,
-          padding: 10,
-          //   justifyContent:"flex-start",
-          borderWidth: 2,
-          borderColor: "#00A79B",
-          backgroundColor: "#00A79B1A",
-          borderRadius: 7,
-        }}
-      >
-        <View
-          style={{
-            flexDirection: "row",
-            flex: 1,
-            gap: 10,
-            // justifyContent:"space-around",
-            alignItems: "center",
-          }}
-        >
-          <Entypo
-            name="text-document"
-            size={34}
-            color="black"
-            style={{
-              fontSize: 40,
-              color: "#00A79B",
-              marginTop: 10,
-              marginLeft: 10,
-            }}
-          />
-          <Text style={{ marginTop: 8, fontWeight: "400", fontSize: 18 }}>
-            Previous putway details
-          </Text>
-        </View>
-        <View
-          style={{
-            flexDirection: "row",
-            flex: 1,
-            gap: 10,
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <Text style={{ color: "#00A79B", fontSize: 19, marginLeft: 580 }}>
-            View Details
-          </Text>
-          <Text>
-            <MaterialCommunityIcons
-              name="arrow-right"
-              size={28}
-              color="black"
-              style={{ fontSize: 20, color: "#00A79B", marginTop: 10 }}
-            />{" "}
-          </Text>
-        </View>
+        <TouchableOpacity style={{ flexDirection: "row", alignItems: "center" }} onPress={() => router.push("/Putaway/History")} >
+          <Text style={{ color: "#00A79B", fontSize: 16, marginRight: 5 }}>  View Details</Text>
+          <MaterialCommunityIcons name="arrow-right" size={24} color="#00A79B"/>
+        </TouchableOpacity>
       </View>
-
       <TouchableOpacity onPress={() => router.push("/Putaway/PutAway2")}>
-        <View>
-          <MaterialIcons
-            name="qr-code-scanner"
-            size={174}
-            color="black"
-            style={{ textAlign: "center", color: "#00A79B" }}
-          />
-          <Text
-            style={{
-              textAlign: "center",
-              color: "#00A79B",
-              fontSize: 18,
-              marginTop: 10,
-            }}
-          >
-            Scan QR Code on rack{" "}
-          </Text>
-          <Text style={{ textAlign: "center", color: "#00A79B", fontSize: 18 }}>
-            to start putting items
-          </Text>
+        <View style={{ alignItems: "center", marginVertical: 20 }}>
+          <MaterialIcons name="qr-code-scanner" size={width * 0.45} color="#00A79B" />
+          <Text style={{ textAlign: "center", color: "#00A79B", fontSize: 18, marginTop: 10, }} > Scan QR Code on rack </Text>
+          <Text style={{ textAlign: "center", color: "#00A79B", fontSize: 18, }} > to start putting items</Text>
         </View>
       </TouchableOpacity>
-    </View>
+    </ScrollView>
   );
 };
 
